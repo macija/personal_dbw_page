@@ -1,0 +1,38 @@
+/*Accordion styles */
+.accordion{
+    background-color:#EFCD49;
+    color: #342a24;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: 2px;
+    border-radius: 20px;
+    outline: none;
+    transition: 0.4s;
+}
+.active, .accordion:hover{
+    background-color:  #ba9e30;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.panel{
+    padding: 0 18px;
+    background-color: #EFCD49;
+    display: none;
+    overflow: hidden;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.ul{
+    padding-left: 10px;
+}
+.output_seq {
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * 5);
+    margin-left: calc(-0.5 * 5);
+    background-color:  #f4e092;
+    overflow: hidden;
+    border-radius: 20px;
+}
