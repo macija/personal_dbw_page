@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="Marc Ciruela" />
-        <title>My personal web</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/terminal-solid.svg"/>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/bootstrap.css" rel="stylesheet"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/grid-gallery.css"/>
-
-    </head>
-
-<body>
 <?php
+include("html/head.html");
 include("html/nav_bar.html");
 ?>
 <div class="container px-4 px-lg-5" id="pictures">

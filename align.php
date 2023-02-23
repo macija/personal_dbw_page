@@ -1,7 +1,7 @@
 <?php
 
 require "globals.inc.php";
-$title = 'error';
+
 // Start checking what the user has send
 // if empty data, go back to origin
 if (isset($_POST)){
@@ -140,7 +140,6 @@ foreach($writing_arr as $line){
 }
 fclose($ff);
 
-
 /*******************Decide command line to execute************/
 
 // check if a hmm profile was given
@@ -198,10 +197,10 @@ if($_SESSION['queryData']['outfmt'] == 'fasta'){
 // define the output
 $clustalcmdline .= ' -o '.$tempFile.".out";
 $_SESSION['debug']['cmd'] = $clustalcmdline;
-echo $clustalcmdline;
-// execute clustalw, command line prefix set in globals.inc.php
-exec($clustalHome.$clustalcmdline);
 
+// execute clustalw, command line prefix set in globals.inc.php
+exec("$clustalHome$clustalcmdline 2>&1", $output);
+//print_r($output);
 
 // Read results file and parse hits onto $result[]
 $result = file($tempFile . ".out");

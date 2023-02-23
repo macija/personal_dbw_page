@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="Marc Ciruela" />
-        <title>My personal web</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/terminal-solid.svg"/>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/bootstrap.css" rel="stylesheet"/>
-    </head>
-<body>
 <?php
+    include("html/head.html");
     include("html/nav_bar.html");
 ?>
 
@@ -124,7 +110,7 @@
             Find me on: 
             <a href="https://github.com/macija"><img class="img-fluid rounded mb-2 mx-4 mb-lg-0" src="assets/github-mark/github-mark.svg" alt="..." width="30"/></a>
 
-            <a href="https://www.linkedin.com/in/marc-ciruela-jard%C3%AD-54522a237"><img class="img-fluid rounded mx-2 mb-4 mb-lg-0" src="assets/Linkedin-Logos/LI-In-Bug.png" alt="..." width="30"/></a>
+            <a href="https://www.linkedin.com/in/marc-ciruela-jard%C3%AD-54522a237"><img class="img-fluid rounded mx-2 mb-4 mb-lg-0" src="assets/LinkedIn-Logos/LI-In-Bug.png" alt="..." width="30"/></a>
             <br>
             <br>
             Or write me:    <a class="btn btn-secondary" href="mailto:mcirueja16@alumnes.ub.edu?Subject=Contact%20From%20Webpage0" role="button">Contact</a>            

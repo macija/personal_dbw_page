@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="Marc Ciruela" />
-        <title>My personal web</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/terminal-solid.svg"/>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/bootstrap.css" rel="stylesheet"/>
-    </head>
-<body>
 <?php
-    include("html/nav_bar.html");
-
+include("html/head.html");
+include("html/nav_bar.html");
 ?>
 
 <!-- Page content-->
@@ -43,15 +28,20 @@
         <a class="btn btn-secondary" href="clustalwindex.php" role="button">Go to the application</a>
     </div>
 </div>
-<div class="row gx-4 gx-lg-5 align-items-center my-5">
+<div class="row gx-4 gx-lg-5 align-items-center my-5" id="db_model">
     <div class="col">
-        
+        <h3> Database design </h3>
+        <br>
+        <p> Design of a database for a bioinformatics suport service to manage data from proteomics analysis that includes: a) Sample and user detals, b) Experimental protocols used, c) Protein sequences found, d) Identified proteins from sequences, 5) References. 
+        </p>
+        <br>
+        <img class="img-fluid rounded mb-4 mb-lg-0" style="display:block; margin:auto;" src="assets/db_exercise_1.svg" alt="...Sorry..." width="900"/>
     </div>
 </div>
 
-    <?php
-    readfile("html/content_row.html");
 
+
+<?php
     include("html/footer.html");
 ?>
 
@@ -59,5 +49,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
 <script src="js/scripts.js"></script>
+<script type="text/javascript" src="js/grid-gallery.js"></script>
+
 </body>
 </html>

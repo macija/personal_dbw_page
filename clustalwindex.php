@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 /* Main form of the ClustalW MSA application
 * Marc  Ciruela Jardí 2023
@@ -45,39 +44,14 @@ if (isset($_REQUEST['new']) or !isset($_SESSION['queryData'])){
 }
 */
 
-?>
-<link rel="stylesheet" href="css/clustalw.css">
-<?php
 
 // end initialization 
 
 // main form
 ?>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="Marc Ciruela" />
-        <title>ClustalW</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/terminal-solid.svg"/>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/bootstrap.css" rel="stylesheet"/>
-        <link rel="stylesheet\" href="css/clustalw.css\">
-
-        <script src="js/clustalw.js"></script>
-
-        <!-- IE 8 Support-->
-            <!--[if lt IE 9]>
-                <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-            <![endif]--> 
-    </head>
 
 <?php
+include("html/head.html");
 include('html/nav_bar.html');
 ?>
 <div class="container px-5 px-lg-5 gy-5 py-5" id="application">
@@ -261,6 +235,12 @@ if(isset($_SESSION['result'])){
                 </div></div>
             </div> <!-- Ends row of sequences -->
 <?php
+foreach(scandir($tmpDir) as $file){
+    if (time()-filemtime($file) > 12 * 3600) {
+        // file older than 12 hours
+        unlink($file);
+    } 
+}
 
 session_destroy();
 ?>
